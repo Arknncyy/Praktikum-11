@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Arkan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Profil Arkan</h1>
+        <figure>
+            <img src="foto.jpg" alt="Foto Profil Michelle Firstian Damar Arkana" width="130" height="130">
+            <figcaption>Selamat datang di halaman profil saya.</figcaption>
+        </figure>
+        
+        <div class="header-buttons">
+            <tombol-tema></tombol-tema>
+            <button id="btn-info">Info Tambahan</button>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#biodata">Biodata</a></li>
+                <li><a href="#portofolio">Portofolio Proyek</a></li>
+                <li><a href="#rencana">Rencana Belajar</a></li>
+                <li><a href="#komentar">Komentar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tentang">
+            <h2>Tentang Saya</h2>
+            <p><salam-pengguna nama="Arkan"></salam-pengguna></p>
+            <p>
+                Perkenalkan, nama saya <strong>Michelle Firstian Damar Arkana</strong>. Saya adalah mahasiswa program studi <strong>Informatika</strong> angkatan 2025.
+            </p>
+        </section>
+
+        <section id="biodata">
+            <h2>Biodata Diri</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Nama Lengkap</th>
+                        <td>Michelle Firstian Damar Arkana</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Status</th>
+                        <td>Mahasiswa</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Program Studi</th>
+                        <td>Informatika</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Domisili</th>
+                        <td>D.I. Yogyakarta</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="portofolio">
+            <h2>Portofolio &amp; Pengalaman</h2>
+            
+            <form id="form-portofolio" class="box-form">
+                <h3>Tambah Portofolio Baru</h3>
+                <input type="text" id="input-judul-porto" placeholder="Judul Peran / Kegiatan" required>
+                <input type="text" id="input-waktu-porto" placeholder="Periode / Waktu (contoh: 2026)" required>
+                <textarea id="input-deskripsi-porto" placeholder="Deskripsi singkat..." required></textarea>
+                <button type="submit">Tambah Portofolio</button>
+            </form>
+
+            <div id="loading" class="tersembunyi">
+                <div class="spinner"></div>
+                <p>Memuat data dari server...</p>
+            </div>
+
+            <div id="container-portofolio"></div>
+        </section>
+
+        <section id="rencana">
+            <h2>Rencana Belajar Semester Ini</h2>
+            <ol>
+                <li>Mempelajari tag dasar HTML dan membuat struktur web.</li>
+                <li>Memahami logika dasar pemrograman.</li>
+                <li>Mengerjakan latihan dan praktikum tepat waktu.</li>
+            </ol>
+        </section>
+
+        <section id="komentar">
+            <h2>Tinggalkan Komentar</h2>
+            <form id="form-komentar" class="box-form">
+                <input type="text" id="input-nama" placeholder="Nama Anda">
+                <textarea id="input-pesan" placeholder="Tulis komentar (min. 5 karakter)..."></textarea>
+                
+                <p id="pesan-error" class="error-msg tersembunyi"></p>
+                
+                <button type="submit">Kirim Komentar</button>
+            </form>
+
+            <div class="komentar-header">
+                <h3>Daftar Komentar</h3>
+                <button id="btn-hapus-semua" class="btn-danger">Hapus Semua Komentar</button>
+            </div>
+            
+            <ul id="daftar-komentar"></ul>
+        </section>
+
+        <aside id="kotak-aside">
+            <h2>Informasi Kontak &amp; Minat</h2>
+            <p>Nama: <span id="nama-penulis">Michelle Firstian Damar Arkana</span></p>
+            <p>Email: <a id="email-penulis" href="mailto:michellefirstian12@gmail.com">michellefirstian12@gmail.com</a></p>
+            <h3>Hobi:</h3>
+            <ul>
+                <li>Fotografi dan videografi</li>
+                <li>Mendengarkan musik</li>
+                <li>Eksplorasi hardware dan komputer</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Michelle Firstian Damar Arkana. Hak cipta dilindungi.</p>
+        <button id="btn-reset" class="btn-danger" style="margin-top: 10px;">Reset Semua Data</button>
+    </footer>
+
+    <script src="komponen.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
